@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+@import '../../node_modules/bulma/sass/utilities/initial-variables.sass';
+@import '_variables.scss';
+@import '../../node_modules/bulma/bulma.sass';
+
+@font-face {
+  font-family: 'Rubik';
+  font-display: auto;
+  src: local('Rubik'), url(https://fonts.gstatic.com/s/rubik/v8/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
+}
+
+* {
+  font-family: Rubik, sans-serif;
+}
+
+body {
+  background-color: $website-background;
+}
+
+.website-background {
+  background-color: $website-background;
+}
+
+.landing {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/* Overriding gatsby's default behavior */
+.landing-image {
+  padding: 0;
+  display: block !important;
+  height: 100vh !important;
+  width: auto !important;
+}
+
+.has-bottom-border {
+  border-bottom: solid 2px #eee;
+}
+
+.github {
+  z-index: 2;
+  margin: 25px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.overlay {
+  /* This entire overlay is copy pasted from satania.moe, bless you pizzacus */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .75) 100%);
+  min-width: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.discord {
+  color: #7289DA;
+  &:hover {
+    color: #7289DA;
+    box-shadow: #7289DA 1px 1px 20px;
+  }
+}
+
+.reddit {
+  color: orangered;
+  &:hover {
+    color: orangered;
+    box-shadow: orangered 1px 1px 20px;
+  }
+}
+
+.banner-sections {
+  height: 100%;
+}
+
+.shadowed {
+  text-shadow: $shadow;
+}
+
+.banner-text {
+  display: inline-block;
+  margin: 0 0;
+  font-weight: 600;
+  padding-bottom: 0;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.narrow-width {
+  @media(max-width: $merge-breakpoint) {
+    width: 100%;
+  }
+  margin: 0 auto;
+  width: 85%;
+}
+
+.shrink {
+  flex-shrink: 1;
+}
+
+.no-grow {
+  flex-grow: 0;
+}
+
+.intro-section {
+  background-color: $website-secondary-background;
+  min-height: 70vh;
+}
+
+.footer {
+  padding: 10px !important;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+// Bulma fixes
+
+.content ul {
+  margin-top: 0;
+}
+
+.spaced-l {
+  margin-left: 5px;
+}
+
+.twitter-wrapper {
+  padding: 3rem 0;
+  overflow-x: scroll;
+}
+
+.twitter-slides {
+  //background: white;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.flickity-slider {
+  display: flex;
+  align-items: center;
+}
+
+.flickity-viewport {
+  transition: height 0.2s;
+}
+
+.tweet {
+  box-shadow: 5px 12px 15px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1) !important;
+  margin: 1rem 1.5rem;
+  width: 550px;
+
+  @media (max-width: $tablet) {
+    width: 250px;
+    height: auto;
+  }
+
+  .twitter-controls-container {
+    margin-top: 10px;
+  }
+
+  .twitter-tag {
+    margin-top: 0 !important;
+  }
+
+  .tweet-name {
+    margin-bottom: 0 !important;
+  }
+
+  .tweet-image {
+    margin: 10px 0;
+  }
+
+  .gatsby-resp-image-link {
+    margin-bottom: 5px;
+  }
+}
+
+.section-header {
+  background: #7676ae;
+  box-shadow: black inset;
+}
+
+.carousel {
+  * {
+    text-align: left;
+  }
+
+  .slide {
+    background: $website-background !important;
+  }
+}
+
+.no-padding-top {
+  padding-top: 0;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.fanart-tag {
+  z-index: 2;
+  position: absolute;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
